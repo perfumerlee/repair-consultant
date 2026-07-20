@@ -18,9 +18,15 @@
     .issue-tools{display:grid;grid-template-columns:1fr auto;gap:8px;margin:14px 0}.result-summary{align-self:center;color:var(--muted);font-size:12px}.issue-list{display:grid;gap:10px;max-height:calc(100vh - 370px);min-height:330px;overflow:auto;padding-right:4px}.issue-group{border:1px solid var(--line);border-radius:12px;overflow:hidden}.issue-group summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 14px;font-weight:800;cursor:pointer;background:#fafbfb}.issue-group summary::-webkit-details-marker{display:none}.issue-group[open] summary{border-bottom:1px solid var(--line);background:#f4f8f7}.issue-desc{padding:10px 14px 0;color:var(--muted);font-size:12px;line-height:1.5}.issue-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid #edf0f2}.issue-row:first-of-type{border-top:0}.issue-name{font-size:13px}.price{font-weight:900;white-space:nowrap}.price.unknown{color:#9a6b12}.empty{display:grid;place-items:center;min-height:230px;text-align:center;color:var(--muted);border:1px dashed #cfd6da;border-radius:12px;background:#fafbfb;padding:24px}
     .cart-panel{display:flex;flex-direction:column;max-height:calc(100vh - 108px);position:sticky;top:90px}.cart-owner{padding:14px 16px;background:#f4f8f7;border-bottom:1px solid var(--line)}.cart-owner strong{font-size:15px}.cart-owner div{font-size:12px;color:var(--muted);margin-top:3px}.cart-items{padding:12px;overflow:auto;flex:1;min-height:210px}.cart-item{border:1px solid var(--line);border-radius:11px;padding:12px;margin-bottom:9px}.cart-item-head{display:flex;justify-content:space-between;gap:8px}.cart-item strong{font-size:13px}.cart-path{font-size:11px;color:var(--muted);margin:5px 0}.cart-issue{display:flex;justify-content:space-between;gap:10px;font-size:13px}.cart-note{width:100%;border:0;border-top:1px dashed var(--line);margin-top:9px;padding:8px 0 0;outline:0;font-size:12px}.totals{padding:16px;border-top:1px solid var(--line);background:#fbfcfc}.total-line{display:flex;justify-content:space-between;margin:6px 0;color:var(--muted);font-size:13px}.grand{color:var(--ink);font-size:20px;font-weight:900}.cart-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.muted{color:var(--muted)}
     .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);padding:11px 16px;border-radius:999px;background:#17202a;color:#fff;opacity:0;pointer-events:none;transition:.2s;z-index:30;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .mobile-nav{display:none}.mobile-tab{position:relative;border:0;background:transparent;color:#66706f;min-height:52px;padding:6px 10px;font-weight:800;font-size:12px}.mobile-tab.active{color:var(--brand)}.mobile-tab-icon{display:block;font-size:19px;line-height:1;margin-bottom:4px}.mobile-badge{position:absolute;top:3px;left:calc(50% + 9px);display:none;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--danger);color:#fff;font-size:10px;line-height:18px;text-align:center}
     dialog{border:0;border-radius:15px;padding:0;box-shadow:0 24px 80px rgba(0,0,0,.24);width:min(620px,calc(100vw - 28px))}dialog::backdrop{background:rgba(10,20,25,.44)}.dialog-body{padding:20px}.dialog-body h3{margin:0 0 12px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
     @media(max-width:1180px){.app{grid-template-columns:220px 1fr}.cart-panel{grid-column:1/-1;position:static;max-height:none}.cart-items{max-height:420px}}
-    @media(max-width:760px){.topbar{align-items:flex-start;padding:14px}.toolbar{justify-content:flex-end}.toolbar .btn{font-size:12px;padding:8px}.app{display:block;padding:10px}.panel{margin-bottom:10px}.filters,.field-row{grid-template-columns:1fr}.customer-list{max-height:180px}.issue-list{max-height:none}.issue-row{grid-template-columns:1fr auto}.issue-row .btn{grid-column:1/-1}.cart-actions{grid-template-columns:1fr}.brand p{display:none}}
+    @media(max-width:760px){
+      body{padding-bottom:calc(66px + env(safe-area-inset-bottom));-webkit-tap-highlight-color:transparent}.topbar{position:static;align-items:stretch;flex-direction:column;gap:10px;padding:12px 12px 10px}.brand{justify-content:flex-start}.brand-mark{width:34px;height:34px;border-radius:10px;font-size:13px}.brand h1{font-size:16px}.brand p{display:none}.toolbar{width:100%;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:2px;scrollbar-width:none}.toolbar::-webkit-scrollbar{display:none}.toolbar .btn{flex:0 0 auto;font-size:11px;padding:7px 9px;border-radius:8px}
+      .app{display:block;padding:8px;min-height:0}.app>.panel{display:none;margin-bottom:0;border-radius:14px;box-shadow:0 5px 18px rgba(20,35,45,.07)}.app>.panel.mobile-active{display:flex;flex-direction:column;position:static;max-height:none}.panel-head{padding:14px 14px 11px}.panel-body{padding:12px}.filters,.field-row{grid-template-columns:1fr;gap:9px}.field{min-height:44px;font-size:16px;padding:10px 11px}.label{font-size:12px}.source-note{font-size:11px;margin-bottom:11px;padding:9px 10px}.model-meta{margin:10px 0;gap:5px}.chip{font-size:11px;padding:4px 8px}
+      .customer-list{max-height:none}.customer{min-height:56px;padding:11px 12px}.customer-form{margin-top:12px;padding-top:12px}.issue-tools{grid-template-columns:1fr;margin:10px 0}.result-summary{text-align:right;margin-top:-3px}.issue-list{max-height:none;min-height:0;overflow:visible;padding-right:0}.issue-group summary{min-height:50px;padding:12px}.issue-desc{padding:9px 12px 1px}.issue-row{grid-template-columns:minmax(0,1fr) auto auto;gap:8px;min-height:56px;padding:10px 12px}.issue-row .btn{grid-column:auto;min-width:58px;min-height:40px}.issue-name{font-size:13px;line-height:1.35}.price{font-size:13px}.cart-items{overflow:visible;max-height:none;padding:10px}.cart-panel{min-height:calc(100vh - 172px)}.cart-actions{grid-template-columns:1fr 1fr}.cart-actions .btn{min-height:44px}.totals{padding:14px}.grand{font-size:19px}
+      .mobile-nav{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);left:0;right:0;bottom:0;z-index:25;padding:5px 8px calc(5px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid #d9dfe2;box-shadow:0 -8px 24px rgba(20,35,45,.09);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.toast{bottom:calc(78px + env(safe-area-inset-bottom));max-width:calc(100vw - 24px);text-align:center}
+    }
     @media print{body{background:#fff}.topbar,.customer-panel,.catalog-panel,.cart-actions,.btn-icon{display:none!important}.app{display:block;padding:0}.cart-panel{box-shadow:none;border:0;max-height:none}.cart-items{overflow:visible}.panel-head{padding-left:0}.totals{border-top:2px solid #222}.source-print{display:block!important}}
   </style>
 </head>
@@ -64,6 +70,11 @@
       <div id="totals" class="totals"></div>
     </aside>
   </main>
+  <nav class="mobile-nav" aria-label="모바일 상담 메뉴">
+    <button class="mobile-tab" data-mobile-view="customer"><span class="mobile-tab-icon">♙</span>고객</button>
+    <button class="mobile-tab active" data-mobile-view="catalog"><span class="mobile-tab-icon">⌕</span>수리 선택</button>
+    <button class="mobile-tab" data-mobile-view="cart"><span class="mobile-tab-icon">▤</span>견적<span id="mobileCartBadge" class="mobile-badge"></span></button>
+  </nav>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <input id="restoreFile" type="file" accept="application/json" hidden>
   <script id="repair-data" type="application/json">{
@@ -61775,6 +61786,7 @@
     if (!state.customers?.length) state = defaultState();
     let selectedProduct = DATA.products[0];
     let selectedDeviceId = DATA.devices.find(d=>d.product===selectedProduct)?.id;
+    let mobileView = 'catalog';
     let toastTimer;
     function save(){ localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
     function toast(message){ $('toast').textContent=message; $('toast').classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('toast').classList.remove('show'),1800); }
@@ -61810,6 +61822,7 @@
       $('cartItems').innerHTML=cart.length?cart.map((x,i)=>`<article class="cart-item"><div class="cart-item-head"><strong>${i+1}. ${esc(x.product)} · ${esc(x.deviceName)}</strong><button class="btn btn-danger btn-icon" data-remove="${esc(x.key)}" aria-label="삭제">×</button></div><div class="cart-path">${esc([...(x.path||[]),x.model].filter(Boolean).join(' › '))}</div><div class="cart-issue"><span>${esc(x.groupName)} · ${esc(x.issueName)}</span><strong>${money(x.price)}</strong></div><input class="cart-note" data-note="${esc(x.key)}" value="${esc(x.note||'')}" placeholder="항목 메모"></article>`).join(''):'<div class="empty">선택한 고객의 견적 항목이 없습니다.<br>고장 세부항목을 담아주세요.</div>';
       document.querySelectorAll('[data-remove]').forEach(btn=>btn.onclick=()=>{state.carts[c.id]=cart.filter(x=>x.key!==btn.dataset.remove);save();renderCustomers();renderCart();});
       document.querySelectorAll('[data-note]').forEach(input=>input.onchange=()=>{const item=cart.find(x=>x.key===input.dataset.note);if(item)item.note=input.value;save();});
+      const badge=$('mobileCartBadge'); badge.textContent=cart.length; badge.style.display=cart.length?'block':'none';
       const priced=cart.filter(x=>x.price!=null),total=priced.reduce((n,x)=>n+x.price,0),vat=Math.round(total/11),unknown=cart.length-priced.length;
       $('totals').innerHTML=`<div class="total-line"><span>견적 항목</span><strong>${cart.length}건</strong></div><div class="total-line"><span>포함 VAT</span><span>${money(vat)}</span></div>${unknown?`<div class="total-line"><span>별도 상담</span><strong>${unknown}건</strong></div>`:''}<div class="total-line grand"><span>예상 합계</span><span>${money(total)}</span></div><div class="cart-actions"><button class="btn" id="copyQuote">상담 내용 복사</button><button class="btn btn-primary" id="printQuote">견적서 인쇄</button><button class="btn btn-danger" id="clearCart">견적 비우기</button><button class="btn" id="deleteCustomer">고객 삭제</button></div>`;
       $('copyQuote').onclick=()=>copyQuote(c,cart,total); $('printQuote').onclick=()=>window.print(); $('clearCart').onclick=()=>{if(confirm('이 고객의 견적 항목을 모두 비울까요?')){state.carts[c.id]=[];save();renderCustomers();renderCart();}}; $('deleteCustomer').onclick=deleteCustomer;
@@ -61823,7 +61836,14 @@
       state.customers=state.customers.filter(x=>x.id!==c.id); delete state.carts[c.id]; state.activeCustomerId=state.customers[0].id; save();renderAll();
     }
     function download(name,text,type='application/json'){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-    function renderAll(){renderCustomers();renderProductOptions();renderIssues();renderCart();}
+    function setMobileView(view){
+      mobileView=view; const map={customer:'.customer-panel',catalog:'.catalog-panel',cart:'.cart-panel'};
+      document.querySelectorAll('.app>.panel').forEach(panel=>panel.classList.remove('mobile-active'));
+      document.querySelector(map[view])?.classList.add('mobile-active');
+      document.querySelectorAll('[data-mobile-view]').forEach(btn=>btn.classList.toggle('active',btn.dataset.mobileView===view));
+      if(matchMedia('(max-width:760px)').matches) window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function renderAll(){renderCustomers();renderProductOptions();renderIssues();renderCart();setMobileView(mobileView);}
     $('customerForm').onsubmit=e=>{e.preventDefault();const name=$('customerName').value.trim();if(!name)return;const id=uid();state.customers.push({id,name,phone:$('customerPhone').value.trim(),memo:$('customerMemo').value.trim(),createdAt:new Date().toISOString()});state.carts[id]=[];state.activeCustomerId=id;save();e.target.reset();renderAll();toast('새 고객을 추가했습니다.');};
     $('productSelect').onchange=e=>{selectedProduct=e.target.value;selectedDeviceId=DATA.devices.find(d=>d.product===selectedProduct)?.id;$('issueSearch').value='';renderProductOptions();renderIssues();};
     $('deviceSelect').onchange=e=>{selectedDeviceId=e.target.value;$('issueSearch').value='';renderIssues();};
@@ -61831,6 +61851,7 @@
     $('exportData').onclick=()=>download(`phone911-repair-data-${DATA.fetchedAt.slice(0,10)}.json`,JSON.stringify(DATA,null,2));
     $('backupCustomers').onclick=()=>download(`phone911-customers-${new Date().toISOString().slice(0,10)}.json`,JSON.stringify({version:1,exportedAt:new Date().toISOString(),state},null,2));
     $('restoreCustomers').onclick=()=>$('restoreFile').click();
+    document.querySelectorAll('[data-mobile-view]').forEach(btn=>btn.onclick=()=>setMobileView(btn.dataset.mobileView));
     $('restoreFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const parsed=JSON.parse(await file.text());const next=parsed.state||parsed;if(!Array.isArray(next.customers)||!next.carts)throw new Error();state=next;save();renderAll();toast('고객 데이터를 복원했습니다.');}catch{alert('올바른 고객 백업 JSON 파일이 아닙니다.');}e.target.value='';};
     const categoryCount=DATA.devices.reduce((n,d)=>n+d.issueCategories.length,0),issueCount=DATA.devices.reduce((n,d)=>n+d.issueCategories.reduce((m,g)=>m+g.issues.length,0),0);
     $('dataStats').textContent=`${DATA.devices.length.toLocaleString()}개 기종 · ${categoryCount.toLocaleString()}개 고장 증상 · ${issueCount.toLocaleString()}개 세부항목 · ${new Date(DATA.fetchedAt).toLocaleString('ko-KR')} 수집`;
